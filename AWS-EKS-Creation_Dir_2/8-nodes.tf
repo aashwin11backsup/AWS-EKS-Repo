@@ -1,4 +1,4 @@
-# Create IAM role for EKS worker nodes
+  # Create IAM role for EKS worker nodes
 
 resource "aws_iam_role" "nodes_iam_role" {
   name = "${local.env}-${local.eks-name}-nodes-role"
