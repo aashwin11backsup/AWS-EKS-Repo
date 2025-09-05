@@ -100,7 +100,7 @@ resource "aws_iam_user_policy_attachment" "aws_iam_user_ATTACH_iam_user_assume_r
 }
 
 #add the user to the entry access of RBAC
-resource "aws_eks_access_entry" "developer_access_entry" {
+resource "aws_eks_access_entry" "eks_admin_access_entry" {
   cluster_name = aws_eks_cluster.eks_cluster.name
   principal_arn = aws_iam_role.eks_admin_role.arn 
   kubernetes_groups = ["my-admin"]
